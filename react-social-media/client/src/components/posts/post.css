@@ -1,0 +1,69 @@
+.postprofileimgtop{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-container{
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow:  -1px 0px 13px 4px rgba(148,148,148,0.19);
+    outline: none;
+
+
+}
+.thumbs{
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.post-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+
+}
+.post-bottom-left{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.post-bottom-right{
+    margin-right: 10px;
+}
+
+.postimg{
+    border-radius: 10px;
+    max-width: 98%; {/*max image size is 90% of div size*/}
+   
+}
+
+.title{
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+.post-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.post-top-item{
+    margin-left: 15px;
+    vertical-align: middle;
+}

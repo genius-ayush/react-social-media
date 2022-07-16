@@ -1,0 +1,86 @@
+.rightbar-container{
+    width: 21%;
+    margin-top: 50px;
+    padding: 5px;
+    
+}
+.rightbar-top{
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: left;
+    display: flex;
+
+}
+
+.gift{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.ad{
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.online-container{
+    margin-top: 50px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: solid 1px rgb(240, 240, 240);
+    margin: 5px;
+    padding: 10px;
+
+}
+
+.friends-container{
+    margin-top: 50px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: solid 1px rgb(240, 240, 240);
+    margin: 5px;
+    padding: 10px;
+
+}
+.profiles{
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+}
+
+
+
+
+.separator{
+    width: 90%;
+    /*centers the hr element*/
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 40%;
+}
+
+.rightbar-top-profile{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item{
+    margin-bottom: 10px;
+}
+
+.userinfo{
+    margin-bottom: 20px;
+}
+
+.rightbar-bottom-profile{
+    margin-top: 20px;
+}
+
+.followbutton{
+    width: 90%;
+}

@@ -1,0 +1,16 @@
+.profile-bottom{
+    display: flex;
+}
+
+
+.content{
+    display: flex;
+}
+
+.profileleft{
+    min-width: 250px;
+}
+
+.profile-right{
+    margin: 0;
+}

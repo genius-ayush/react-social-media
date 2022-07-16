@@ -1,0 +1,90 @@
+.sharewrapper{
+    margin-left: 20px;
+    padding: 15px;
+}
+
+
+.shareupper{
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.sharebottom{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.imagepreview{
+    max-width:90%;
+    padding-bottom: 20px;
+}
+
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.separator{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.photos{
+    color: green;   
+}
+
+.emotions{
+    color: gold;
+}
+
+.location{
+    color: red;
+}
+
+.tag{
+    color: orange;
+}
+
+.share{
+    background-color: #0096FF	;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 60px;
+
+}
+
+
+.share-container{
+    outline: none;
+    box-shadow:  -1px 0px 13px 4px rgba(148,148,148,0.19);
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+
+.shareprofilepic{
+    height: 50px;
+    width: 55px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feelings{
+    border: none;
+    width: 100%;
+}
+.feelings:focus{
+    outline: none;
+}
+
+/*align placeholder text to left*/
+.feelings::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-align: left;
+  }

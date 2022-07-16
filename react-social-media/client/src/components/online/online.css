@@ -1,0 +1,32 @@
+.profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.onlineitem{
+    display: flex;
+    margin-top: 10px;
+    list-style: none;
+    padding: none;
+    align-items: center;
+
+}
+
+.username{
+    margin-left: 30px;
+}
+
+.status{
+    background-color: lime;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    left: 55px;
+    top: -17px;
+    border: solid 2px white;
+}
+

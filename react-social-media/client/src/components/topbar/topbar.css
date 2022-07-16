@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    
+}
+
+/*make nav sticky top*/
+.Topbar-container{
+    display: flex;
+    width: 100%;
+    background-color: #0276FD	;
+    padding: 2px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo{
+    margin-left: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+
+.topbar-profileImg{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Topbar-left{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.Topbar-center{
+    flex: 4;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    margin-right: 8px;
+    color: white;
+}
+
+.search-input{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+
+}
+input::-webkit-input-placeholder {
+    text-align: center
+}
+.search-input:focus{
+    outline: none;
+}
+
+.search-bar{
+    width:80%
+}
+
+.Topbar-right{
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topbar-icons{
+    display: flex;
+    color: white;
+}
+
+.topbar-link-item{
+    margin-right: 8px;
+    margin-left: 8px;
+    color: white;
+    position: relative;
+}
+
+.topbar-link-item-notification{
+    position: absolute;
+    font-size: 8px;
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.topbar-icon-item{
+    margin-right: 20px;
+}
+
+a.logoutbutton{
+    background-color: white;
+    width: 70px;
+    height: 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #0276FD;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+

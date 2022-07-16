@@ -1,0 +1,25 @@
+.feed-container{
+    width: auto;
+}
+
+
+.Leftsidebar-container{
+    min-width: 200px;
+    flex-grow: 3;
+    max-width: 300px;
+}
+
+.content{
+    display: flex;
+
+}
+
+.firstpost{
+    height: 500px;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,44 @@
+.Leftsidebar-container{
+    margin-top: 50px;
+}
+
+{/*custom css for scroll bar when needed*/}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(163, 163, 163, 0.3);
+  }
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(215, 215, 215);
+  }
+
+.showmore{
+    width: 70%;
+    height: 8%;
+    margin-top: 20px;
+    margin-right: 40%;
+    border: none;
+}
+
+.showmore:hover{
+    background-color: rgb(226, 224, 224);
+}
+
+
+.hr{
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+
+}
+
+.sidebar-item{
+    display: flex;
+}
+
+.sidebar-icon{
+    margin-bottom: 10px;
+    margin-right: 15px;
+}

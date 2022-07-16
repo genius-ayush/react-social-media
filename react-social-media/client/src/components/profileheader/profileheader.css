@@ -1,0 +1,25 @@
+.coverimg{
+    height: 400px;
+    width: 100%;
+
+}
+
+.profileimg{
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 5px white !important;
+
+    /*best way to center the profile pic was to set margin left and right auto*/
+    margin-left: auto;
+    margin-right: 0%;
+    margin-top: -120px;
+}
+
+.profile-name{
+    text-align: middle;
+    font-size: 1.5rem;
+}
+
