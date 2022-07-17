@@ -27,7 +27,7 @@ export default function Rightbar( { profile, id }){
                 <div className="rightbar-wrapper">
                     <div className="rightbar-top">
                         <img className='gift' src="./assets/gift.png" alt="" />
-                        <span>John smith and 'number' others have a birthday today</span>
+                        <span>John smith and few others have a birthday today</span>
                     </div>
                     <div className="rightbar-middle">
                         <img className='ad' src="./assets/ad.png" alt="" />
