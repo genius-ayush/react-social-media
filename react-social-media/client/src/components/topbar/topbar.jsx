@@ -42,7 +42,7 @@ export default function Topbar(){
                     <div className="profile-pic">
                         {user.profilePicture ?
                             (<img src={user.profilePicture} alt="" className="topbar-profileImg" />) :
-                            (<img src={pub + `profile.png`} alt="" className="topbar-profileImg" />)}
+                            (<img src='/assets/profile.png' alt="" className="topbar-profileImg" />)}
                     </div>
                 </a>
                 <a className='logoutbutton' href='/users/api/logout'>Logout</a>

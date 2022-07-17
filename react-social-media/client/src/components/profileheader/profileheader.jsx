@@ -108,7 +108,7 @@ export default function ProfileHeader({id}){
             {/*if theres an image in preview state, it will overwrite the profile pic or cover pic */}
             <div className='profiletop'>
                 {/* label allows to link to input field, so that clicking the cover image or profile image targets file input, its only clickeable if the user is on their own page */}
-                    <label className='coverimg' style={currentUser._id === id ? {cursor:'pointer'} : {cursor:'default'}} htmlFor={currentUser._id === id ? 'cover' : ''}>{/*label needs to inherit the classname so it keeps same formatting  */}
+                    <label className='coverpiclabel' style={currentUser._id === id ? {cursor:'pointer'} : {cursor:'default'}} htmlFor={currentUser._id === id ? 'cover' : ''}>{/*label needs to inherit the classname so it keeps same formatting  */}
                         {users.coverPicture && !previewCoverPic ?
                             (<img className='coverimg' src={users.coverPicture} alt="" />) 
                             :
@@ -118,7 +118,7 @@ export default function ProfileHeader({id}){
                                 (<img className='coverimg' src="/assets/cover.jpeg" alt="" />)
                         }
                     </label>
-                    <label className='profileimg' style={currentUser._id === id ? {cursor:'pointer'} : {cursor:'default'}} htmlFor={currentUser._id === id ? 'profile' : ''}>
+                    <label  style={currentUser._id === id ? {cursor:'pointer'} : {cursor:'default'}} htmlFor={currentUser._id === id ? 'profile' : ''}>
                         {users.profilePicture && !preview ? 
                             (<img className='profileimg' src={users.profilePicture} alt="" />) 
                             :

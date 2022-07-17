@@ -55,6 +55,7 @@ const handleSubmit = (e)=>{
                         <input type="password" className='form-item password' ref={password} placeholder='enter your password' />
                         <Button className='loginbutton' variant='primary'  onClick={handleSubmit} >Login</Button>
                         <span className='forgot'>forgot your password?</span>
+                        <Button className='loginbutton' variant='success'  href='/register' >Register</Button>
                     </div>
                 </div>
             </div>

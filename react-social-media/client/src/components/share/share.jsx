@@ -51,7 +51,7 @@ export default function Share({user, rerender}){
     //resets preview state to initial state so image preview is cleared.
     async function handlesubmitfile(e){
         e.preventDefault()
-        if(!preview) return;
+        if(!preview) alert('please attach a photo, this is radsocial not radtwitter');
         try{
             uploadImage(preview)
             //removes preview image
@@ -82,7 +82,7 @@ export default function Share({user, rerender}){
                 <form className="sharebottom" onSubmit={handlesubmitfile}>
                     {/* outer div is a label, so that the entire element is clickeable and will interact with the file input */}
                     <label htmlFor="file" className="sharebottomitem">
-                        <PermMedia className="photos"/>
+                        <PermMedia className="photos" style={{cursor:'pointer'}}/>
                         {/*sends the file selected to state, and its display is set to none so we can use the Permedia icon as the defacto button */}
                         <input ref={file} style={{display: 'none'}} type='file' id='file'  onChange={handleinputfile}/>
                     </label>
