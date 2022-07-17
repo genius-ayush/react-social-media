@@ -126,7 +126,7 @@ passport.use(
     helmet.contentSecurityPolicy({
       useDefaults: true,
       directives: {
-        "img-src": ["'self'", "https: data:"]
+        "img-src": ["'self'", "http: data:"]
       }
     })
   )
