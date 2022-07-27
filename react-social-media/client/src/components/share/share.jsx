@@ -84,7 +84,8 @@ export default function Share({user, rerender}){
                     <label htmlFor="file" className="sharebottomitem">
                         <PermMedia className="photos" style={{cursor:'pointer'}}/>
                         {/*sends the file selected to state, and its display is set to none so we can use the Permedia icon as the defacto button */}
-                        <input ref={file} style={{display: 'none'}} type='file' id='file'  onChange={handleinputfile}/>
+                        {/*only accepts jpeg img or gif or png */}
+                        <input ref={file} style={{display: 'none'}} accept="image/gif, image/jpeg, image/png" type='file' id='file'  onChange={handleinputfile}/>
                     </label>
                     <div className="sharebottomitem">
                         <ShareIcon className="tag" />
