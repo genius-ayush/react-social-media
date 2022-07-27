@@ -22,7 +22,7 @@ const app = express();
 
 
 //port 8080 is used for using cloud9 app preview
-app.listen(process.env.PORT || 8080, ()=>{
+app.listen(process.env.PORT || 3001, ()=>{
     console.log('listening');
 });
 

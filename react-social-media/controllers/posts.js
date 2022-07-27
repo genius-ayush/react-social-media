@@ -6,20 +6,20 @@ const dotenv = require('dotenv').config()
 
 //create post
 module.exports.createPost = async function(req,res){
-    const currentUser = req.body.userId
-    const image= req.body.data
-    const description = req.body.description
-    const upload = await cloudinary.uploader.upload(image, {folder: 'react-social-media'}) //uploaded to cloudinary server under specific folder
-    const newPost = new Post({
-        userId:currentUser,
-        description:description,
-        img:upload.url,
-    })
     try{
-        await newPost.save()
-        res.send(newPost)
+        const currentUser = req.body.userId
+        const image= req.body.data
+        const description = req.body.description
+        const upload = await cloudinary.uploader.upload(image, {folder: 'react-social-media'}) //uploaded to cloudinary server under specific folder
+        const newPost = new Post({
+            userId:currentUser,
+            description:description,
+            img:upload.url,
+        })
+            await newPost.save()
+            res.send(newPost)
     }catch(e){
-        console.log('error in create post controller')
+        console.log(e)
     }
 }
 

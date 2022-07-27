@@ -33,7 +33,6 @@ export default function Share({user, rerender}){
     //thats because the post request sends a request back to the front end when the request has been completed.
     //the fetch
     async function uploadImage(urlencodedimage){
-        try{
              await axios({
                 method:"POST",
                 data: JSON.stringify({data: urlencodedimage, userId:user._id, description:description.current.value }),
@@ -42,9 +41,6 @@ export default function Share({user, rerender}){
             })
             //reloads the page when a response is returned from api, in order to trigger feed to fetch new post data
             .then(res=>{rerender()})
-        }catch(err){
-           console.log('error in share component')
-        }
     }
 
     //checks to see if an image is loaded in preview, then tries to send post request

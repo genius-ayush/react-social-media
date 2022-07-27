@@ -1,4 +1,4 @@
 #no node modules
 node_modules
 #no env
-env
+.env
