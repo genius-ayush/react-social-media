@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000
 //create new socketio server instance, specifying port and client url
 const io = new Server(PORT, {
     cors: {
-        origin: `http://localhost:${PORT}`,
+        origin: `https://rad-social.herokuapp.com/:${PORT}`,
     }
 }, console.log('connected'));
 
