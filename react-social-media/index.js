@@ -17,7 +17,7 @@ const postRoutes = require('./Routes/Posts')
 const messageRoutes = require('./Routes/Messages')
 const conversationRoutes = require('./Routes/Conversations')
 const app = express();
-const socket  = require('socket.io')
+const { Server }  = require('socket.io')
 
 const http = require('http')
 
@@ -25,7 +25,7 @@ const server = http.createServer(app)
 
 const PORT = process.env.PORT || 3000
 
-const io = socket(server, {
+const io = new Server(server, {
     cors: {
         origin: `https://rad-social.herokuapp.com/:${PORT}`,
     }
