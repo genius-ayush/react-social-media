@@ -16,12 +16,8 @@ const crypto = require('crypto')
 const postRoutes = require('./Routes/Posts')
 const messageRoutes = require('./Routes/Messages')
 const conversationRoutes = require('./Routes/Conversations')
-
 const app = express();
 
-app.listen(process.env.PORT || 3001, ()=>{
-    console.log('listening');
-});
 
 
 const connectDB = async () => {
@@ -146,16 +142,25 @@ app.get("*", function (request, response) {
 //socketio--------------------------------------------------------------------
 
 
-const { Server } = require('socket.io')
+const socket  = require('socket.io')
+
+const http = require('http')
+
+const server = http.createServer(app)
 
 const PORT = process.env.PORT || 3000
 
-//create new socketio server instance, specifying port and client url
-const io = new Server(PORT, {
+//----
+const io = socket(server, {
     cors: {
         origin: `https://rad-social.herokuapp.com/:${PORT}`,
     }
 }, console.log('connected'));
+
+
+server.listen(process.env.PORT || 3001, ()=>{
+  console.log('listening');
+});
 
 //store connected users socketid and userid (sender and receiver)
 let users = []
