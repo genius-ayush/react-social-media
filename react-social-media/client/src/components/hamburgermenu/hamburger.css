@@ -1,0 +1,164 @@
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 90%;
+    top: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #ffffff;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #e6e6e6;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #0e6efc
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #f6f6f6;
+    padding: 20px;
+    font-size: 1.15em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #f6f6f6;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+    overflow: hidden !important;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+
+  .item{
+    padding-top: 20px;
+  }
+
+
+.links{
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.friendslist{
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+
+.link{
+    text-decoration: none !important;
+    color: gray;
+}
+
+.Friend{
+    display: block;
+}
+
+.menu-item{
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+.title{
+    color: gray;
+}
+.search{
+    display: flex;
+}
+
+.search-icon{
+    height: 30px !important;
+    color: #ffffff !important;
+    width: 30px !important;
+}
+
+.search-button{
+    height: 42px;
+    width: 42px;
+    background-color: #0e6efc;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.search-button:hover{
+    background-color: #5498ff;
+    scale: 105%;
+    transition: 0.2s;
+}
+
+.separator{
+    width: 80%;
+    color: gray;
+}
+
+
+@media screen and (max-width: 495px){
+
+  .bm-burger-button {
+      left: 10% !important;
+    }
+
+}
+
+
+  @media screen and (max-width: 495px){
+
+    .bm-burger-button {
+        left: 87% !important;
+      }
+
+  }
+
+  @media screen and (min-width: 720px){
+    
+    .bm-burger-button {
+      display: none;
+    }
+  }
+  

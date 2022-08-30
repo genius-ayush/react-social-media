@@ -1,3 +1,34 @@
 .content{
     display: flex;
+    min-height: calc(100vh);
+    padding-right: 10px;
 }
+
+.rightbar{
+    display: none;
+    min-width: 200px;
+    max-width: 350px;
+}
+
+  .leftbar{
+    display: none;
+  }
+
+  @media screen and (min-width: 600px){
+
+    .leftbar{
+        display: block;
+        min-width: 250px;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+  }
+
+  @media screen and (min-width: 950px){
+
+    .rightbar{
+        display: flex;
+    }
+
+  }

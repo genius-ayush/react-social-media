@@ -11,9 +11,14 @@
     border-radius: 15px;
     box-shadow:  -1px 0px 13px 4px rgba(148,148,148,0.19);
     outline: none;
-
+    padding: 10px;
 
 }
+
+.delete{
+    margin-left: 8px;
+}
+
 .thumbs{
     vertical-align: middle;
     margin-right: 15px;
@@ -64,6 +69,10 @@
 }
 
 .post-top-item{
-    margin-left: 15px;
     vertical-align: middle;
+}
+
+.post-top-item.date{
+    margin-right: 70px;
+    font-size: 12px !important;
 }

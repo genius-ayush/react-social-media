@@ -1,8 +1,6 @@
 const Post = require('../models/post')
 const User = require('../models/user')
 const { cloudinary } = require('../utils/cloudinary')
-const dotenv = require('dotenv').config()
-
 
 //create post
 module.exports.createPost = async function(req,res){
@@ -88,11 +86,14 @@ module.exports.timelinePost = async(req, res)=>{
         const currentUser = await User.findById(req.params.id);
         const userPosts = await Post.find({userId:req.params.id})
         //promise.all accepts array of promises (from multiple .find queries on Post data), returning single promise. pass await to resolve the promise
+        //create new array friendposts which is created from mapping currentuser.followercount array
+        //contains array of posts of friends following the current user
         const friendposts = await Promise.all(
             currentUser.followerCount.map(friendId=>{
                 return Post.find({ userId:friendId })
             }
         ))
+        //merge both arrays (userposts. and friendposts)
         res.send(userPosts.concat(...friendposts))
     }catch(e){console.log('error in timeline controller')}
     

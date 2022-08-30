@@ -67,7 +67,7 @@ export default function Share({user, rerender}){
                     <a href={`/profile/${user._id}`}>
                     { user.profilePicture ? 
                     (<img src={user.profilePicture} alt="" className="shareprofilepic" />) : 
-                    (<img src="./assets/profile.png" alt="" className="shareprofilepic" />) }
+                    (<img src="/assets/profile.png" alt="" className="shareprofilepic" />) }
                     </a>
                     <input type="text" ref={description} placeholder='whats on your mind?' className="feelings" />
                 </div>
@@ -84,13 +84,7 @@ export default function Share({user, rerender}){
                         <input ref={file} style={{display: 'none'}} accept="image/gif, image/jpeg, image/png" type='file' id='file'  onChange={handleinputfile}/>
                     </label>
                     <div className="sharebottomitem">
-                        <ShareIcon className="tag" />
-                    </div>
-                    <div className="sharebottomitem">
                         <Room className="location"/>
-                    </div>
-                    <div className="sharebottomitem">
-                        <EmojiEmotions className="emotions" />
                     </div>
                     <button className="share">share</button>
                 </form>

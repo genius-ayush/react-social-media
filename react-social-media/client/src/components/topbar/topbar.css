@@ -6,9 +6,10 @@
 /*make nav sticky top*/
 .Topbar-container{
     display: flex;
+    justify-content: space-between;
     width: 100%;
     background-color: #0276FD	;
-    padding: 2px;
+    padding: 6px;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -20,26 +21,41 @@
     font-weight: 500;
 }
 
+.logo:hover{
+    color: #283057;
+    transition: 200ms;
+}
+
+
+.topbar-profile{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .topbar-profileImg{
     height: 32px;
     width: 32px;
+    padding-bottom: 2px;
     border-radius: 50%;
     object-fit: cover;
 }
 
+.topbar-profileImg:hover{
+    scale: 120%;
+    transition: 200ms;
+}
+
 .Topbar-left{
-    flex: 3;
     display: flex;
+    width: 150px;
     align-items: center;
     justify-content: start;
 }
 
-.Topbar-center{
-    flex: 4;
-    display: flex;
-    align-items: center;
-}
+.topba
+
+
+
 
 .search-icon{
     margin-right: 8px;
@@ -47,9 +63,9 @@
 }
 
 .search-input{
-    width: 100%;
+    width: 100% !important;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     padding-left: 10px;
 
 }
@@ -65,15 +81,16 @@ input::-webkit-input-placeholder {
 }
 
 .Topbar-right{
-    flex: 5;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-grow: 2;
 }
 
 .topbar-icons{
     display: flex;
     color: white;
+
 }
 
 .topbar-link-item{
@@ -93,11 +110,14 @@ input::-webkit-input-placeholder {
 }
 
 .topbar-icon-item{
-    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-a.logoutbutton{
+.logoutbutton{
     background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 70px;
     height: 28px;
     border-radius: 10px;
@@ -109,4 +129,43 @@ a.logoutbutton{
     margin-right: 10px;
     
 }
+
+.messengerlogout:hover{
+   scale: 110% !important;
+   transition: 200ms;
+    
+}
+
+
+{/* responsiveness for topbar for homepage and messenger*/}
+@media screen and (max-width: 720px){
+
+    .homeandprofile{
+        margin-right: 15%;
+    }
+
+  }
+
+  @media screen and (max-width: 720px){
+
+    .messengerlogout{
+        margin-right: 15%;
+    }
+
+  }
+
+  @media screen and (max-width: 430px){
+
+    .messengerlogout{
+        margin-right: 15%;
+    }
+
+  }
+
+
+
+
+
+
+
 

@@ -1,0 +1,88 @@
+
+.text{
+    background-color: #1976f2;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: medium;
+    text-align: left;
+    max-height: auto;
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
+.messageImg{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;  
+}
+
+.message{
+    display: flex;
+    
+}
+
+
+
+
+.messageTop{
+    display: flex;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: flex-start; /*when using flex-end aligning divs inside the container, max-width must be in pixels not % (eg 50%)*/
+}
+
+.timestamp{
+    text-align: start;
+}
+
+/*messages sent by user will be styled differently (right aligned and gray bg) */
+.messageTop.sender{
+    align-items: flex-end;
+}
+
+.messageTop.sender .text{
+    background-color: rgb(236, 236, 236);
+    color: black;
+}
+
+.messageBottom{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.textarea{
+    width: 80%;
+    padding: 10px;
+    float: left;
+    border-radius: 10px;
+}
+
+.send{
+    height: 50px;
+    width: 100px;
+    box-shadow: none !important;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+  @media screen and (max-width: 440px){
+    .text{
+        max-width: 200px;
+        font-size: small !important;
+    }
+
+  }
+
+  @media screen and (max-width: 410px){
+
+
+  }

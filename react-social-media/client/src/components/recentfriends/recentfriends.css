@@ -9,6 +9,18 @@
 .Friend{
     list-style: none;
     display: flex;
-    padding: none;
+    padding: 10px;
     margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.Friend:hover{
+    background-color: rgba(170, 170, 170, 0.15);
+    scale: 105%;
+    transition: 200ms;
+}
+
+.link {
+    text-decoration: none;
+    color: #c3c2ba;
 }

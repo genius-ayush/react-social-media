@@ -1,5 +1,6 @@
 .profile-bottom{
     display: flex;
+    margin-right: 10px;
 }
 
 
@@ -7,10 +8,27 @@
     display: flex;
 }
 
-.profileleft{
-    min-width: 250px;
+.leftbar{
+    display: none;
 }
 
-.profile-right{
-    margin: 0;
+.profileright{
+    padding-left: 20px;
+    width: 100%;
 }
+
+.profile-container{
+    margin-bottom: 50px;
+}
+
+
+@media screen and (min-width: 720px){
+
+    .leftbar{
+        display: block;
+        min-width: 250px;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+  }

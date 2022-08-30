@@ -7,6 +7,7 @@ const passport = require('passport')
 
 
 //user CRUD routes
+router.get('/api/username/:username', user.getUsername)
 router.get('/:id', user.getUser)
 router.post('/:id', user.updateUser);
 router.delete('/:id', user.deleteUser);

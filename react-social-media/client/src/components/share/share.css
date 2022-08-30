@@ -38,6 +38,12 @@
     color: green;   
 }
 
+.photos:hover{
+    color: rgb(0, 76, 0);   
+    scale: 130%;
+    transition: 200ms;
+}
+
 .emotions{
     color: gold;
 }
@@ -56,6 +62,13 @@
     border: none;
     border-radius: 5px;
     width: 60px;
+
+}
+
+.share:hover{
+    scale: 110%;
+    transition: 200ms;
+    background-color: #0068b3;
 
 }
 

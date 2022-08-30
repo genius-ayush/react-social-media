@@ -9,11 +9,11 @@ root.render(
 
   //provider allows context props to be accessible to all components in app
   <Provider>
-    <React.StrictMode>
+    {/*<React.StrictMode>*/}
       <BrowserRouter> {/*wrap the app in browser router so i can use useNavigation in app component*/}
         <App />
       </BrowserRouter>
-    </React.StrictMode>
+    {/*</React.StrictMode>*/}
   </Provider>
  
 );

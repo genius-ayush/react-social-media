@@ -1,0 +1,13 @@
+.skeleton{
+    display: flex;
+    padding: 40px;
+}
+
+.left{
+
+}
+
+.right{
+    flex-grow: 1;
+    margin-top: 60px;
+}

@@ -1,6 +1,7 @@
 .coverimg{
     height: 400px;
     width: 100%;
+    border-radius: 20px 0px 20px 0px;
 
 }
 
@@ -25,4 +26,13 @@
 
 .coverpiclabel{
     width: 100%;
+}
+
+.profiletop{
+    width: 100%;
+}
+
+.profilewrapper{
+    width: 100%;
+    margin-top: 55px;
 }

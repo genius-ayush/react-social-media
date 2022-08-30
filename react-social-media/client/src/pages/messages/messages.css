@@ -1,0 +1,106 @@
+.messenger{
+    margin-top: 40px;
+    display: flex;
+    padding: 10px;
+    height: calc(100vh - 50px);
+    min-width: 340px;
+    /*overflow-x: hidden !important;*/
+}
+
+
+.separator{
+    width: 80%;
+}
+
+.convoWrapper{
+    background-color: #fcfcfc;
+    box-shadow:  2px 5px 15px 5px rgba(0,0,0,0.11);
+    border-radius: 15px;
+    margin: 20px;
+    width: 250px;
+
+}
+
+.messageWrapper{
+    flex: 9;
+    box-shadow:  2px 5px 15px 5px rgba(0,0,0,0.11);
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    min-width: 200px;
+    
+}
+
+.messageBottom{
+    margin-top: 0;
+}
+
+.selectmessage{
+    color: gray;
+    opacity: 0.5;
+    margin-top: 20%;
+    padding: 20px;
+}
+
+.selectmessage2{
+    display: none;
+}
+
+
+.chatOnlineWrapper{
+    justify-content: start;
+    flex: 3;
+}
+
+.messages{
+    height: 60vh;
+    overflow-x: hidden;
+    margin: 10px;
+    overflow-y: scroll;
+    min-width: 200px;
+}
+
+.textarea{
+    border: 0.5px solid gray;
+}
+
+.convoTop2{
+    padding-bottom: 40px;
+}
+
+
+@media screen and (max-width: 720px){
+
+    .convoWrapper{
+        display: none ; 
+    }
+    .selectmessage2{
+        display: block;
+        color: gray;
+        opacity: 0.5;
+        margin-top: 20%;
+        padding: 20px;
+    }
+
+    .selectmessage{
+        display: none;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

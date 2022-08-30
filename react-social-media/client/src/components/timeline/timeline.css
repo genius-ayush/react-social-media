@@ -1,11 +1,13 @@
 .feed-container{
-    width: 50%;
-    flex-grow: 6;
+    min-width: 300px;
     margin-top: 50px;
 }
 
-
-
-.feed-wrapper-profile{
-    
+.firstpost{
+    color: gray;
+    opacity: 0.5;
+    padding: 20px;
+    margin-right: 0;
+    margin-left: 15px;
+    border:none;
 }

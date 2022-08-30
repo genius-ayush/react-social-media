@@ -5,6 +5,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios'
 import { Context } from "../../contextapi/Context";
 import Button from "react-bootstrap/esm/Button";
+import moment from "moment";
 
 
 
@@ -12,7 +13,7 @@ export default function Posts({id,post,rerender}){
     const {currentUser} = useContext(Context) //grabs the state from context
     
     //state to store the details of the post creator
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState(null)
 
     //useEffect hook is called to fetch data of the creator of the post
     //must be called for each post component, so there will be many api calls when first rendering feed (since each post needs an api call to get user data)
@@ -41,6 +42,7 @@ export default function Posts({id,post,rerender}){
         //send post request to likes controller
         await axios({
             method:"POST",
+            //data sent as req.body
             data: {userId: currentUser._id },
             headers: { 'Content-Type': 'application/json' },
             url:`/posts/like/d/${post._id}`
@@ -50,7 +52,7 @@ export default function Posts({id,post,rerender}){
     }
 
     //checks if the post creator has profile pic, otherwise default pic
-    const profileimg = user.profilePicture ? (user.profilePicture) : ("./assets/profile.png")
+    const profileimg = user && user.profilePicture ? (user.profilePicture) : ("/assets/profile.png")
 
 
     const deletepost = async function(){
@@ -64,41 +66,43 @@ export default function Posts({id,post,rerender}){
         }catch(err){console.log('error in post component')}
     }
     return(
-        <div className="post-container">
-            {/* conditional rendering of element based on if there is an associated user with the post id, took a while to get right */}
-            {profileimg !==undefined &&
-                <div className="wrapper">
-                    <div className="post-top">
-                        <div className="post-top-left">
-                            <a href={`/profile/${id}`}>
-                                <img className="post-top-item postprofileimgtop" src={profileimg} alt="" />
-                            </a>
-                            <span className="post-top-item username">{user.username}</span>
-                            <span className="post-top-item date">{post.createdAt}</span>
+        <>
+            <div className="post-container">
+                {/* conditional rendering of element based on if there is an associated user with the post id, took a while to get right */}
+                {profileimg !==undefined &&
+                    <div className="wrapper">
+                        <div className="post-top">
+                            <div className="post-top-left">
+                                <a href={`/profile/${id}`}>
+                                    <img className="post-top-item postprofileimgtop" src={profileimg} alt="" />
+                                </a>
+                                <span className="post-top-item username">{user && user.username}</span>
+                                <br/>
+                                <span style={{fontSize:'13px', textAlign:'start'}} className="post-top-item date">{moment(post.createdAt).fromNow()}</span>
+                            </div>
+                            <div className="post-top-right">
+                            {/*current user can only delete his own posts */}
+                            {currentUser._id === post.userId ? <Button className="delete" variant="danger" onClick={deletepost}>Delete</Button> : ''}
+                            </div>
                         </div>
-                        <div className="post-top-right">
-                        {/*current user can only delete his own posts */}
-                        {currentUser._id === post.userId ? <Button variant="danger" onClick={deletepost}>Delete</Button> : ''}
-                            <MoreVert />
+                        <div className="title">
+                            {post.description}
+                        </div>
+                        <div className="post-center">
+                            <img className="postimg" src={post.img} alt="" />
+                        </div>
+                        <div className="post-bottom">
+                            <div className="post-bottom-left">
+                                <ThumbUp className="thumbs" onClick={handleLike} />
+                                <span>{like} people like this</span>
+                            </div>
+                            <div className="post-bottom-right">
+                            </div>
                         </div>
                     </div>
-                    <div className="title">
-                        {post.description}
-                    </div>
-                    <div className="post-center">
-                        <img className="postimg" src={post.img} alt="" />
-                    </div>
-                    <div className="post-bottom">
-                        <div className="post-bottom-left">
-                            <ThumbUp className="thumbs" onClick={handleLike} />
-                            <span>{like} people like this</span>
-                        </div>
-                        <div className="post-bottom-right">
-                            {/*<span>{post.post.comment} comments</span>*/}
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
+                }
+            </div>
+        
+    </>
     )
 }            

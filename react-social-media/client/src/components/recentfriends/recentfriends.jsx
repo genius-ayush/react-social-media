@@ -2,11 +2,13 @@ import './recentfriends.css'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 
 export default function Recentfriends({ id }){
-    const [user, setUser] = useState('')
+    const [user, setUser] = useState(null)
 
     //hook to grab the user of each friend, and store it in user state
     useEffect(()=>{
@@ -28,15 +30,24 @@ export default function Recentfriends({ id }){
     return(
         //render friend information
         <div className='Friend'>
+            {user ? (     
             <li>
-                <a href={`/profile/${id}`}>
-                {user.coverPicture ? 
+                <a className='link' href={`/profile/${id}`}>
+                {user && user?.coverPicture ? 
                     (<img src={user.profilePicture} alt="" className="friendprofilepic" />) : 
-                    (<img src={`/assets/profile.png`} alt="" className="friendprofilepic" />)
+                    (<img src='/assets/profile.png' alt="" className="friendprofilepic" />)
                 }
+                
+                <span>{user && user.username}</span>
                 </a>
-                <span>{user.username}</span>
-            </li>
+            </li>) 
+            : 
+            (<div style={{display:'flex',justifyContent:'space-around',alignItems:"center"}}>
+                <Skeleton circle width={40} height={40}/>
+                <Skeleton width={100}/>
+            </div>
+            )}
+
         </div>
 
 )}

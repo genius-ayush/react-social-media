@@ -14,14 +14,11 @@ const MongoStore = require('connect-mongo')
 const LocalStrategy = require('passport-local').Strategy
 const crypto = require('crypto')
 const postRoutes = require('./Routes/Posts')
-
-const { createProxyMiddleware } = require('http-proxy-middleware');//easiest way to proxy in development mode, instead of editing package.json
-
+const messageRoutes = require('./Routes/Messages')
+const conversationRoutes = require('./Routes/Conversations')
 
 const app = express();
 
-
-//port 8080 is used for using cloud9 app preview
 app.listen(process.env.PORT || 3001, ()=>{
     console.log('listening');
 });
@@ -81,16 +78,6 @@ passport.serializeUser(function (user, cb) {
   });
 
 
-
-//setup view engine (middleware)
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.engine('ejs', engine); //sets default ejs engine to ejs-mate
-
-
-
-
-
 //function for verifying req.body pass with the hash
 function validPassword(password, hash, salt) {
     var hashVerify = crypto
@@ -141,22 +128,18 @@ app.use(bodyParser.urlencoded({ limit: "7mb", extended: true })); // for parsing
 
 
 //--setup for heroku deployment
-app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.use(express.static(path.resolve(__dirname, "/client/build")));
 
 
 
 app.use('/users/', userRoutes)
 app.use('/posts/', postRoutes)
+app.use('/messages', messageRoutes )
+app.use('/conversations', conversationRoutes)
 
 
 //all other routes must use routes in client, needed for production (heroku deployment)
 app.get("*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
-
-
-
-
-
-
 

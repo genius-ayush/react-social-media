@@ -57,6 +57,17 @@ module.exports.getUser = async(req, res) => {
   }  
 };
 
+//find user based on username
+module.exports.getUsername = async(req, res) => {
+  try{
+    //find a user using case insensitive search. Its not good for scaling (millions of users)
+      const user = await User.findOne({username:{ $regex : `^${req.params.username}$`, $options : 'i' }})
+      res.send(user)
+  }catch(err){
+    res.status(400).send(err);
+  }  
+};
+
 //sends user data if user is stored in req.user from passport, session causes persistence
 module.exports.getUserInfo = async(req, res)=>{
   try{
@@ -72,9 +83,8 @@ module.exports.updateUser = async(req, res) => {
       delete req.body.password
       const user = await User.findByIdAndUpdate(id, { ...req.body, salt: saltpass.salt, hash: saltpass.hash})
       await user.save();
-      //send to main page
   }catch(e){
-      console.log('error in updateuser controller');
+      console.log('error in updating user controller');
   }  
 };
 
