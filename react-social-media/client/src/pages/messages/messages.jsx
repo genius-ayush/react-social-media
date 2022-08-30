@@ -53,7 +53,7 @@ export default function Message() {
   //setting up client socket
   useEffect(()=>{
     //set client socket to point to socket api
-    socket.current = io(`ws://rad-social.herokuapp.com:${process.env.PORT}`)
+    socket.current = io(`ws://rad-social.herokuapp.com`)
     //listen to when theres incoming message, then store incoming message in state
     //this is the 'outbound' message thats being sent to client after having been routed through server, and sent to the intended recipients
     
