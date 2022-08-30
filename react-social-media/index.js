@@ -128,7 +128,7 @@ passport.use(
       useDefaults: true,
       directives: {
         "img-src": ["'self'", "http: data:"],
-        "script-src": ["'self'","'unsafe-eval'"]//hamurger menu requires this change to csp, which is risky (since its just portfolio app i will let this slide)
+        "script-src": ["'unsafe-eval'"]//hamurger menu requires this change to csp, which is risky (since its just portfolio app i will let this slide)
       }
     })
   )
