@@ -128,7 +128,7 @@ app.use(bodyParser.urlencoded({ limit: "7mb", extended: true })); // for parsing
 
 
 //--setup for heroku deployment
-app.use(express.static(path.resolve(__dirname, "/client/build")));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 
 
