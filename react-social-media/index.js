@@ -33,7 +33,7 @@ const io = new Server(server, {
 
 
 server.listen(PORT, ()=>{
-  console.log('listening');
+  console.log(`listening on port ${PORT}`);
 });
 
 
