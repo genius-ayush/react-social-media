@@ -32,7 +32,7 @@ const io = new Server(server, {
 }, console.log('connected'));
 
 
-server.listen(process.env.PORT || 3001, ()=>{
+server.listen(PORT, ()=>{
   console.log('listening');
 });
 
