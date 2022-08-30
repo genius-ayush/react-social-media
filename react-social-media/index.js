@@ -17,6 +17,24 @@ const postRoutes = require('./Routes/Posts')
 const messageRoutes = require('./Routes/Messages')
 const conversationRoutes = require('./Routes/Conversations')
 const app = express();
+const socket  = require('socket.io')
+
+const http = require('http')
+
+const server = http.createServer(app)
+
+const PORT = process.env.PORT || 3000
+
+const io = socket(server, {
+    cors: {
+        origin: `https://rad-social.herokuapp.com/:${PORT}`,
+    }
+}, console.log('connected'));
+
+
+server.listen(process.env.PORT || 3001, ()=>{
+  console.log('listening');
+});
 
 
 
@@ -141,26 +159,6 @@ app.get("*", function (request, response) {
 
 //socketio--------------------------------------------------------------------
 
-
-const socket  = require('socket.io')
-
-const http = require('http')
-
-const server = http.createServer(app)
-
-const PORT = process.env.PORT || 3000
-
-//----
-const io = socket(server, {
-    cors: {
-        origin: `https://rad-social.herokuapp.com/:${PORT}`,
-    }
-}, console.log('connected'));
-
-
-server.listen(process.env.PORT || 3001, ()=>{
-  console.log('listening');
-});
 
 //store connected users socketid and userid (sender and receiver)
 let users = []
