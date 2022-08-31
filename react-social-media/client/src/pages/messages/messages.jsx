@@ -100,7 +100,7 @@ export default function Message() {
 
   //when friend logs out, they are removed from online array
     useEffect(()=>{
-      if(loggedoutuser && onlinefriends && onlinefriends.length > 0 && onlinefriends.includes(loggedoutuser)){
+      if(loggedoutuser && onlinefriends && onlinefriends.length > 1 && onlinefriends.includes(loggedoutuser)){
         let filtered = onlinefriends.filter(e=>e!==loggedoutuser)
         setOnlineFriends(filtered)
       }
