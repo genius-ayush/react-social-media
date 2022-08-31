@@ -105,7 +105,7 @@ export default function Message() {
         setOnlineFriends(filtered)
       }
       if(loggedoutuser && onlinefriends && onlinefriends.length === 1 && onlinefriends.includes(loggedoutuser)){
-        setOnlineFriends([])
+        setOnlineFriends(null)
       }
 
     },[loggedoutuser])
