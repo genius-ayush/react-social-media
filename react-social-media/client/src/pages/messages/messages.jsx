@@ -52,8 +52,8 @@ export default function Message() {
 
   //setting up client socket
   useEffect(()=>{
-    //set client socket to point to socket api
-    socket.current = io(`ws://rad-social.herokuapp.com`)
+    //set client socket to point to socket api, blank if its same url as backend
+    socket.current = io()
     //listen to when theres incoming message, then store incoming message in state
     //this is the 'outbound' message thats being sent to client after having been routed through server, and sent to the intended recipients
     
@@ -170,6 +170,8 @@ export default function Message() {
   useEffect(()=>{
     if(Selected){ //selected is null in beginning, dont need unecessary useeffect call
       try{
+        //delete current displayed messages from state, then fetch messages of new convos
+        setMessage(null)
         const getMessages = async function(){
           //fetch messages of the 'Selected' conversation
           await axios.get(`/messages/${Selected._id}`).then(res=>{
