@@ -89,7 +89,7 @@ export default function Message() {
   //when friend logs in, theyre added to onlinefriends array
   useEffect(()=>{
     if(onlinefriends === null && loggedinuser){
-      setOnlineFriends(loggedinuser)
+      setOnlineFriends([loggedinuser])
     }
     if(onlinefriends && loggedinuser){
       if(!onlinefriends.includes(loggedinuser)){
