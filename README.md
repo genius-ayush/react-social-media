@@ -103,9 +103,33 @@ MONGO_URL='enter mongoatlas url, starts with mongodb://'
 - Login using the demo account credentials
 
 
+### To create a post
+1. Click the green album icon which will prompt you to upload an image
+2. You may also write a description
+3. Press the share button to create a post!
+
 [![Product Name Screen Shot][product-screenshot2]](https://rad-social.herokuapp.com/)
 
+- The items highlighted are the different interactivity points of the homepage
+- The top left allows you to search the profile of any registered user
+- The messenger icon below it will give you access to live chat features
+- The profile page button will redirect to your profile page
 
+### Adding a friend
+
+- In order to follow someone you must search their profile page using the search icon on the top left, then press the follow button
+- The user will only show up on the friends list if they are following you as well (both parties must follow eachother)
+- Only friends will show up in Messenger app
+
+[![Product Name Screen Shot][product-screenshot3]](https://rad-social.herokuapp.com/)
+
+### Chatting in real-time using messenger app
+- Users can select a conversation on the left to view conversations
+- the notification circle will turn from gray to green when the friend is online
+- messages are sent and received in real-time
+- logging out is easy, just click log-out on the top right
+
+[![Product Name Screen Shot][product-screenshot4]](https://rad-social.herokuapp.com/)
 
 
 
@@ -141,20 +165,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
@@ -171,8 +181,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: https://res.cloudinary.com/cattleherd/image/upload/v1662760777/react-social-media-github/pic_toaxqf.png
 [product-screenshot2]: https://res.cloudinary.com/cattleherd/image/upload/v1662761225/react-social-media-github/pic_srf3ht.png
-[product-screenshot3]: https://res.cloudinary.com/cattleherd/image/upload/v1662760777/react-social-media-github/pic_toaxqf.png
-[product-screenshot4]: https://res.cloudinary.com/cattleherd/image/upload/v1662760777/react-social-media-github/pic_toaxqf.png
+[product-screenshot3]: https://res.cloudinary.com/cattleherd/image/upload/v1662761648/react-social-media-github/pic_aykgrh.png
+[product-screenshot4]: https://res.cloudinary.com/cattleherd/image/upload/v1662762041/react-social-media-github/pic_iqorld.png
 [Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [NodeJS]: [https://nextjs.org/](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
