@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png]](https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png)
+[![Product Name Screen Shot][product-screenshot]](https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png)
 
 I wanted to use the react fundamentals that I have learned from my react pokedex project (hosted on my github), as well as the fullstack fundamentals that I learned from creating my campgrounds viewing web application (hosted on github as well), to create a fullstack social media platform site. I will add more features as I learn more about web development, and hopefully others can learn from this project as well.
 
@@ -162,7 +162,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png
 [Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [NodeJS]: [https://nextjs.org/](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
