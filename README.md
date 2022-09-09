@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png)
+[![Product Name Screen Shot][https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png]](https://res.cloudinary.com/cattleherd/image/upload/v1662756126/react-social-media-github/homepage_oewajy.png)
 
 I wanted to use the react fundamentals that I have learned from my react pokedex project (hosted on my github), as well as the fullstack fundamentals that I learned from creating my campgrounds viewing web application (hosted on github as well), to create a fullstack social media platform site. I will add more features as I learn more about web development, and hopefully others can learn from this project as well.
 
@@ -70,8 +70,6 @@ I wanted to use the react fundamentals that I have learned from my react pokedex
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 * ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
