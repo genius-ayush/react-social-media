@@ -5,9 +5,8 @@
 <!-- PROJECT SHIELDS -->
 
 
-[![Open Source][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/radwan-ahmed-2267b8224/]
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/radwan-ahmed-2267b8224/)
 
 
 
@@ -75,9 +74,9 @@ I wanted to use the react fundamentals that I have learned from my react pokedex
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-* [![Express][Express.js]][https://expressjs.com/]
-* [![MongoDB][MongoDB]][https://www.mongodb.com/]
-* [![NodeJS][Node.js]][https://nodejs.org/en/]
+* ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+* ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+* ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
