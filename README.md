@@ -74,7 +74,7 @@ I wanted to use the react fundamentals that I have learned from my react pokedex
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][https://reactjs.org/]
+* [![React][React.js](https://reactjs.org/)
 * [![Express][Express.js]][https://expressjs.com/]
 * [![MongoDB][MongoDB]][https://www.mongodb.com/]
 * [![NodeJS][Node.js]][https://nodejs.org/en/]
