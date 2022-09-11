@@ -23,7 +23,6 @@ export default function Home(){ //passing userId and user from app component
                 <div className='rightbar'><Rightbar /></div>
             </div>
         </div>
-        <Footer/>
         </>
     )
 }
