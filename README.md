@@ -6,7 +6,7 @@
 
 
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/radwan-ahmed-2267b8224/)
+
 
 
 
